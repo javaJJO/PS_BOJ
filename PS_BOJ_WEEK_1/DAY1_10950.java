@@ -13,6 +13,7 @@ public class DAY1_10950 {
 			System.out.println(A+B);
 			cnt ++;
 			if(cnt<T) {
+		
 				break;
 			}
 		}
