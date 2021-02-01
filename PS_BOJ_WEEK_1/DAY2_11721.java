@@ -10,11 +10,14 @@ public class DAY2_11721 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String str = br.readLine();
-		
-		for (int i=0; i<str.length(); i++) {
-			System.out.println(str.charAt(i));
-			if(i%10==9) {
-				System.out.println();
+		int A = str.length()/10;
+				
+		for (int i=0; i<=A; i++) {
+			if(i!=A) {
+				System.out.println(str.substring(i*10,(i*10)+10));
+			}
+			if(i==A){
+				System.out.println(str.substring(i*10));
 			}
 		}
 	}
