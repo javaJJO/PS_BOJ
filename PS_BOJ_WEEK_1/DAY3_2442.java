@@ -3,16 +3,21 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
-
-public class DAY3_2440 {
+public class DAY3_2442 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		int N = Integer.parseInt(br.readLine());
 
-		for (int i = N; i > 0; i--) {
-			for (int j = 0; j <i; j++) {
+		for (int i = 0; i < N; i++) {
+			for (int j = 1; j < (N - i); j++) {
+				bw.write(" ");
+			}
+			for (int j = 0; j < (i + 1); j++) {
+				bw.write("*");
+			}
+			for (int j = 0; j < i; j++) {
 				bw.write("*");
 			}
 			bw.write("\n");

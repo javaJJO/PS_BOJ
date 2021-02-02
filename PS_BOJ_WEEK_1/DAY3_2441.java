@@ -11,11 +11,11 @@ public class DAY3_2441 {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		int N = Integer.parseInt(br.readLine());
 
-		for (int i = N; i < 0; i--) {
-			for (int j = 0; j < (N - i); j++) {
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < i; j++) {
 				bw.write(" ");
 			}
-			for (int j = N; j < 0; j--) {
+			for (int j = 0; j <( N-i); j++) {
 				bw.write("*");
 			}
 			bw.write("\n");
