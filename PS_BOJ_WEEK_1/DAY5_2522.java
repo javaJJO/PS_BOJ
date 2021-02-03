@@ -3,30 +3,34 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
-
-public class DAY3_2445 {
+public class DAY5_2522 {
 
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		int N = Integer.parseInt(br.readLine());
-
-		for (int i=1; i<=(2*N-1); i++) {
-			if(i<=N) {  //i=12345
-				for(int j = 0; j<N; j++) {
-					bw.write("*");
-				}
-				for(int j=0; j<(2*N-2*i); j+=2) {
-					bw.write(" ");
-				}
-				for(int j = 0; j<N; j++) {
-					bw.write("*");
-				}
-			}else if(i>N) { //i=6879
-				for(int j=1; j<(N-i); ) {
-					
-				}
+		
+		for (int i=0; i<N; ++i) {
+			for(int j = 1; j< N-i; j++) {
+				bw.write(" ");
 			}
+			for(int j=0; j<(i+1); j++) {
+				bw.write("*");
+			}
+			bw.newLine();
 		}
+		for (int i=0; i<N-1; ++i) {
+			for(int j = 0; j< (i+1); j++) {
+				bw.write(" ");
+			}
+			for(int j=0; j<N-(i+1); j++) {
+				bw.write("*");
+			}
+			bw.newLine();
+		}
+	
+	br.close();
+	bw.flush();
+	bw.close();
 	}
 }
