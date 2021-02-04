@@ -1,5 +1,5 @@
 import java.io.*;
-public class DAY5_1463 {
+public class DAY5_1463_BOTTOM_UP {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -16,7 +16,7 @@ public class DAY5_1463 {
 			if (i % 3 == 0)
 				dp[i] = Math.min(dp[i], dp[i / 3] + 1);
 		}
-		bw.write(dp[N]+"\n");
+		bw.write(dp[N]+"\n"); //"\n"≤¿ «ÿ¡‡æﬂ «œ≥€
 		br.close();
 		bw.flush();
 		bw.close();
