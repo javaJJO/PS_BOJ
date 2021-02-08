@@ -7,6 +7,6 @@ public class DAY6_10844 {
 		int N =Integer.parseInt(br.readLine());
 		
 		
-		dp[n][i] = dp [n-1][i-1] + dp [n-1][i+1]
+
 	}
 }
